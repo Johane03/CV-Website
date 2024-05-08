@@ -77,7 +77,6 @@ nav{
 #home{
     background-image: url(images/background.jpg);
     background-size: cover;
-    filter: blur(2px);
 }
 
 /* About Me Section */
