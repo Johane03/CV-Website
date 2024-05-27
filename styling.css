@@ -13,6 +13,8 @@
     --bg-colour: #ACB7DF;
     --second-bg-colour: #68749D;
     --text-colour: #ffffff;
+    --heading-text: 1.8rem;
+    --p-text: 1.2rem;
 }
 
 html{
@@ -28,6 +30,12 @@ body{
 h1{
     color: var(--text-colour);
     padding-bottom: 20px;
+    font-size: var(--heading-text);
+}
+
+p{
+    color: var(--text-colour);
+    font-size: var(--p-text);
 }
 
 span{
@@ -94,7 +102,7 @@ nav{
 #about article{
     width: 50%;
     height: 100%;
-    padding: 10px;
+    padding: 20px 50px 20px 0px;
     float: right;
 }
 
@@ -102,8 +110,8 @@ nav{
     border: 2px solid transparent;
     background-color: transparent;
     border-radius: 5px;
-    padding: 10px;
-    width: 100%;
+    padding: 20px 0px 20px 50px;
+    width: 80%;
     height: 90%;
 }
 
@@ -146,7 +154,6 @@ nav{
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    opacity: 0.7;
 }
 
 /* Skills Section */
@@ -154,9 +161,72 @@ nav{
     background-color: var(--bg-colour);
 }
 
+.skills_right{
+    width: 50%;
+    height: 100%;
+    padding: 20px 50px 20px 0px;
+    float: right;
+}
+
+.skills_left{
+    width: 50%;
+    height: 100%;
+    padding: 20px 50px 20px 0px;
+    float: left;
+}
+
+.box .progress_bar_box{
+    display: flex;
+    align-items: center;
+}
+.box .progress_bar_box .progress_bar{
+    width: 100%;
+    height: 10px;
+    background-color: #f2f2f2;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.box .progress_bar_box .progress_bar .line{
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: var(--second-bg-colour);
+    border-radius: 100px;
+    transition: 0.2s;
+    background-image: none;
+}
+
+.box .progress_bar_box .progress_bar .line::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/background.png);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-position: 0 0;
+    animation: animate 10s linear infinite;
+}
+
+.box .progress_bar_box .increasing_percentage{
+    margin-left: 10px;
+    font-size: 25px;
+}
+.box .progress_bar_box .total_percentage{
+    display: none;
+}
+
 /* Projects Section */
 #projects{
     background-color: var(--second-bg-colour);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 /* Contact Section */
