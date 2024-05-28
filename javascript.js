@@ -53,3 +53,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Sticky NavList
+window.addEventListener('scroll', function() {
+    let navList = document.querySelector('header');
+    let navHeight = navList.offsetHeight;
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop >= navHeight) {
+        navList.classList.add('sticky');
+    } else {
+        navList.classList.remove('sticky');
+    }
+});
+
+// Light & Dark Mode
+const modeToggle = document.getElementById('mode-toggle');
+
+modeToggle.addEventListener('click', () => {
+    const root = document.documentElement;
+    const currentMode = root.getAttribute('data-mode');
+
+    if (currentMode === 'light') {
+        root.style.setProperty('--faccent-colour', 'var(--saccent-colour)');
+        root.style.setProperty('--fbg-colour', 'var(--sbg-colour)');
+        root.style.setProperty('--fsecond-bg-colour', 'var(--ssecond-bg-colour)');
+        root.setAttribute('data-mode', 'dark');
+    } else {
+        root.style.setProperty('--faccent-colour', '#c5788f');
+        root.style.setProperty('--fbg-colour', '#ACB7DF');
+        root.style.setProperty('--fsecond-bg-colour', '#68749D');
+        root.setAttribute('data-mode', 'light');
+    }
+});
