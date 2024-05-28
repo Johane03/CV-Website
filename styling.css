@@ -10,8 +10,12 @@
 }
 
 :root{
-    --bg-colour: #ACB7DF;
-    --second-bg-colour: #68749D;
+    --fbg-colour: #ACB7DF;
+    --fsecond-bg-colour: #68749D;
+    --faccent-colour: #c5788f;
+    --sbg-colour: #7998C2;
+    --ssecond-bg-colour: #26456D;
+    --saccent-colour: #7FABAA;
     --text-colour: #ffffff;
     --heading-text: 1.8rem;
     --p-text: 1.2rem;
@@ -33,19 +37,36 @@ h1{
     font-size: var(--heading-text);
 }
 
+h1 span{
+    border-bottom: 5px solid;
+    border-color: var(--faccent-colour);
+}
+
 p{
     color: var(--text-colour);
     font-size: var(--p-text);
 }
 
-span{
-    background-image: url(images/background.png);
-}
-
 section{
     padding: 50px;
     box-sizing: border-box;
-    height: 100%;
+    height: 85vh; 
+}
+
+.button{
+    padding: 10px 20px;
+    background-color: var(--fbg-colour);
+    color: var(--text-colour);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: var(--p-text);
+    transition: all .45s ease;
+}
+
+.button:hover{
+    background-color: var(--faccent-colour);
+    color: black;
 }
 
 /* Header Section */
@@ -54,7 +75,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: var(--bg-colour);
+    background-color: var(--faccent-colour);
+    z-index: 10;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+    float: none;
+    padding: px;
 }
 
 nav{
@@ -69,16 +98,27 @@ nav{
 
 .navList a{
     text-decoration: none;
-    color: white;
-    font-size: 20px;
+    color: var(--text-colour);
+    font-size: var(--p-text);
     font-weight: 500;
     margin: 0 15px;
     transition: all .45s ease;
 }
 
 .navList a:hover{
-    color: var(--bg-colour);
-    text-shadow: 1px 1px 2px var(--second-bg-colour), 0 0 5px black, 0 0 5px var(--bg-colour);
+    color: var(--fbg-colour);
+    text-shadow: 1px 1px 2px var(--fsecond-bg-colour), 0 0 5px black, 0 0 5px var(--fbg-colour);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.sticky + .content {
+    padding-top: 60px;
 }
 
 /* Home Section */
@@ -89,7 +129,7 @@ nav{
 
 /* About Me Section */
 #about{
-    background-color: var(--second-bg-colour);
+    background-color: var(--fsecond-bg-colour);
 }
 
 #about aside{
@@ -140,13 +180,13 @@ nav{
 
 .flip-card-front{
     align-content: center;
-    box-shadow: 10px 10px 5px var(--bg-colour);
+    box-shadow: 10px 10px 15px var(--faccent-colour);
     border-radius: 5px;
 }
 
 .flip-card-back{
     transform: rotateY(180deg);
-    box-shadow: -10px -10px 5px var(--bg-colour);
+    box-shadow: -10px -10px 15px var(--faccent-colour);
     border-radius: 5px;
 }
 
@@ -158,7 +198,7 @@ nav{
 
 /* Skills Section */
 #skills{
-    background-color: var(--bg-colour);
+    background-color: var(--fbg-colour);
 }
 
 .skills_right{
@@ -191,7 +231,7 @@ nav{
     position: absolute;
     width: 0%;
     height: 100%;
-    background-color: var(--second-bg-colour);
+    background-color: var(--fsecond-bg-colour);
     border-radius: 100px;
     transition: 0.2s;
     background-image: none;
@@ -219,7 +259,7 @@ nav{
 
 /* Projects Section */
 #projects{
-    background-color: var(--second-bg-colour);
+    background-color: var(--fsecond-bg-colour);
 }
 
 .grid{
@@ -231,5 +271,5 @@ nav{
 
 /* Contact Section */
 #contact{
-    background-color: var(--bg-colour);
+    background-color: var(--fbg-colour);
 }
