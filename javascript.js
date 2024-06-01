@@ -74,15 +74,26 @@ modeToggle.addEventListener('click', () => {
     const root = document.documentElement;
     const currentMode = root.getAttribute('data-mode');
 
-    if (currentMode === 'light') {
+    if (currentMode === 'purple') {
         root.style.setProperty('--faccent-colour', 'var(--saccent-colour)');
+        root.style.setProperty('--faccent-colour-light', 'var(--saccent-colour-light)');
         root.style.setProperty('--fbg-colour', 'var(--sbg-colour)');
         root.style.setProperty('--fsecond-bg-colour', 'var(--ssecond-bg-colour)');
-        root.setAttribute('data-mode', 'dark');
+        root.setAttribute('data-mode', 'blue');
     } else {
-        root.style.setProperty('--faccent-colour', '#c5788f');
+        root.style.setProperty('--faccent-colour', '#301934');
+        root.style.setProperty('--faccent-colour-light', '#7a3f85');
         root.style.setProperty('--fbg-colour', '#ACB7DF');
         root.style.setProperty('--fsecond-bg-colour', '#68749D');
-        root.setAttribute('data-mode', 'light');
+        root.setAttribute('data-mode', 'purple');
     }
 });
+
+// Scroll to Top
+function scrollToTop() 
+{
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}

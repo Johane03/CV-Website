@@ -5,26 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="styling.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
     <title>Johané Badenhorst CV</title>
 </head>
 <body>
     <!--Header Section-->
     <header>
         <nav>
-            <ul class="navList">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <!--img src="images/logo.png" alt="JB Logo" id="logo"-->
+
+            <div class="navList">
+                <a id="mode-toggle"><i class="fas fa-adjust"></i></a>
+                <a href="#home"><i class="fas fa-home"></i></a>
+                <a href="#about"><i class="fas fa-user"></i></a>
+                <a href="#skills"><i class="fas fa-briefcase"></i></a>
+                <a href="#projects"><i class="fas fa-folder-open"></i></a>
+                <a href="#contact"><i class="fas fa-id-card"></i></a>
+            </div>
         </nav>
-        <img src="images/logo.png" alt="JB Logo" id="logo">
     </header>
 
     <section id="home">
-        <a href="files/CV_JohanéBadenhorst.pdf" class="button" download>Download CV</a>
-        <button id="mode-toggle" class="button">Toggle Mode</button>
+        <img src="images/aboutMe-Cover.jpg" alt="Johané Badenhorst" class="flip-card-img">
+
+
+        <a href="files/CV_JohanéBadenhorst.pdf" class="myButton" download>Download CV</a>
 
     </section>
 
@@ -188,10 +193,9 @@
                 <h2>Project 1</h2>
                 
                 <div class="gallery">
-                    <img src="images/project1-1.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-2.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-3.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-4.jpg" alt="Project 1" class="gallery_img">   
+                    <img src="images/projects/RS_1.png" alt="RS Projects">
+                    <img src="images/projects/RS_2.png" alt="RS Projects">
+                    <img src="images/projects/RS_3.png" alt="RS Projects">
                 </div>
             </div>
             
@@ -199,10 +203,10 @@
                 <h2>Project 2</h2>
                 
                 <div class="gallery">
-                    <img src="images/project1-1.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-2.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-3.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-4.jpg" alt="Project 1" class="gallery_img">   
+                    <img src="images/project1-1.jpg" alt="Project 1">
+                    <img src="images/project1-2.jpg" alt="Project 1">
+                    <img src="images/project1-3.jpg" alt="Project 1">
+                    <img src="images/project1-4.jpg" alt="Project 1">   
                 </div>
             </div>
 
@@ -210,22 +214,79 @@
                 <h2>Project 3</h2>
                 
                 <div class="gallery">
-                    <img src="images/project1-1.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-2.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-3.jpg" alt="Project 1" class="gallery_img">
-                    <img src="images/project1-4.jpg" alt="Project 1" class="gallery_img">   
+                    <img src="images/project1-1.jpg" alt="Project 1">
+                    <img src="images/project1-2.jpg" alt="Project 1">
+                    <img src="images/project1-3.jpg" alt="Project 1">
+                    <img src="images/project1-4.jpg" alt="Project 1">   
                 </div>
             </div>
           
         </article>
     </section>
-    <section id="contact">
-        <h1><span>Contact Me</span></h1>
-        <form action="">
 
-        </form>
-        
+    <!--Contact Section-->
+    <section id="contact">
+        <div class="left">
+            <h1>
+                <span>Contact Me</span>
+            </h1>
+            <ul>
+                <li><h3>Email:</h3><p>info@rs-projectsza.co.za</p></li>
+                <li><h3>Phone:</h3><p>+27 82 871 8690</p></li>
+                <li><h3>Address:</h3><p>Steenkoppies Farm <br> Magaliesburg <br> Rustenburg Road <br> 1791</p></li>
+            </ul>
+            <div class="follow">
+                <a href="#contact" onclick="return confirm('Link currently unavailable')" class="icon linkedIn">
+                    <div class="tooltip">LinkedIn</div>
+                    <span><i class="fab fa-linkedin"></i></span>
+                </a>
+                <a href="#contact" onclick="return confirm('Link currently unavailable')" class="icon facebook">
+                    <div class="tooltip">Facebook</div>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </a>
+                <a href="#contact" onclick="return confirm('Link currently unavailable')" class="icon twitter">
+                    <div class="tooltip">Twitter</div>
+                    <span><i class="fab fa-twitter"></i></span>
+                  </a>
+            </div>
+        </div>
+        <div class="right">
+            <form action="email.php" method="post">
+                <div class="name1">
+                    <label for="firstName"><h3>Name:<span>*</span></h3></label>
+                </div>
+                <div class="name2">
+                    <input type="text" name="firstName" placeholder="First Name" required>
+                </div>
+                <div class="name3">
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                </div>
+                <div class="email1">
+                    <label for="email"><h3>Email:<span>*</span></h3></label>
+                </div>
+                <div class="email2">
+                    <input type="email" name="email" placeholder="" required>
+                </div>
+                <div class="message1">
+                    <label for=""><h3>Message:<span>*</span></h3></label>
+                </div>
+                <div class="message2">
+                    <textarea name="message" placeholder="" required></textarea>
+                </div>
+                <div class="clearButton">
+                    <button type="reset">Clear</button>
+                </div>
+                <div class="submitButton">
+                    <button type="submit" name="submit">Send</button>
+                </div>
+
+            </form>
+        </div>
+    
     </section>
+    <footer>
+        <button class="back-to-top" onclick="scrollToTop()"><i class="fas fa-hand-point-up"></i></button>
+    </footer>
 
     <script src="javascript.js"></script>
 
