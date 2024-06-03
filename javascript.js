@@ -82,7 +82,7 @@ modeToggle.addEventListener('click', () => {
         root.setAttribute('data-mode', 'blue');
     } else {
         root.style.setProperty('--faccent-colour', '#301934');
-        root.style.setProperty('--faccent-colour-light', '#7a3f85');
+        root.style.setProperty('--faccent-colour-light', '#a557b2');
         root.style.setProperty('--fbg-colour', '#ACB7DF');
         root.style.setProperty('--fsecond-bg-colour', '#68749D');
         root.setAttribute('data-mode', 'purple');
