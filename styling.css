@@ -12,16 +12,17 @@
 :root{
     --fbg-colour: #ACB7DF;
     --fsecond-bg-colour: #68749D;
-    --faccent-colour: #4e1b57;
-    --faccent-colour-light: #7a3f85;
+    --faccent-colour: #670e77;
+    --faccent-colour-light: #a557b2;
     --sbg-colour: #7998C2;
-    --ssecond-bg-colour: #3a5272;
-    --saccent-colour: #000b3b;
-    --saccent-colour-light: #1f3180;
+    --ssecond-bg-colour: #4a6d9c;
+    --saccent-colour: #01125d;
+    --saccent-colour-light: #465dc3;
     --text-colour: #ffffff;
+    --title-text: 2.5rem;
     --heading-text: 1.8rem;
     --p-text: 1.2rem;
-    --button-bg-colour: #313131;
+    --button-bg-colour: #252424;
     --button-color: #797878;
     --box-shadow1: 0 3px 15px rgba(0,0,0,.3);
     --box-shadow2: 5px 5px 5px rgba(0,0,0,.3);
@@ -114,7 +115,7 @@ nav{
 
 .navList i{
     font-size: 1.2rem;
-    color: var(--button-color);
+    color: var(--faccent-colour-light);
     pointer-events: none;
 }
 
@@ -135,7 +136,6 @@ nav{
 
 .navList a:hover, button:hover{
     background-color: var(--faccent-colour);
-    color: var(--text-colour);
 }
 
 .sticky {
@@ -151,14 +151,81 @@ nav{
     margin-right: 200px; 
 }
 
+#mode-toggle{
+    width: 65px;
+    height: 65px;
+}
+
 /* Home Section */
 #home{
-    background-image: url(images/bckground.jpg);
+    background-image: url(images/background.jpg);
     background-size: cover;
 }
 
-#home img{
+#home .home_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
+    height: 100%;
+    padding: 80px;
+}
+
+#home article {
+    float: left;
+    width: 50%;  
+    height: 100%; 
+}
+
+#home .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--faccent-colour-light);
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: var(--box-shadow1);
+}
+
+#home img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+#home h1 {
+    color: var(--faccent-colour);
+    font-size: var(--title-text);
+    padding: 0;
+    padding-left: 10px;
+}
+
+#home h2 {
+    color: var(--faccent-colour-light);
+    font-size: var(--heading-text);
+    padding-bottom: 50px;
+    padding-left: 10px;
+}
+
+#home aside{
+    float: right;
+    width: 50%;  
+    height: 100%;
+}
+
+#home .home_info{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 250px auto;
+}
+
+#home .buttons{
+    margin: 10px;
+    width: 100%;
 }
 
 /* About Me Section */
@@ -249,18 +316,26 @@ nav{
     float: left;
 }
 
+.box img, svg{
+    width: 40px;
+    height: 40px;
+}
+
 .box .progress_bar_box{
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
+
 .box .progress_bar_box .progress_bar{
     width: 100%;
-    height: 10px;
+    height: 15px;
     background-color: #f2f2f2;
     border-radius: 100px;
     overflow: hidden;
     position: relative;
 }
+
 .box .progress_bar_box .progress_bar .line{
     position: absolute;
     width: 0%;
@@ -286,6 +361,9 @@ nav{
 .box .progress_bar_box .increasing_percentage{
     margin-left: 10px;
     font-size: 25px;
+    font-weight: 700;
+    color: var(--faccent-colour);
+    text-shadow: var(--box-shadow2);
 }
 .box .progress_bar_box .total_percentage{
     display: none;
@@ -361,7 +439,7 @@ nav{
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    color: var(--button-color);
+    color: var(--faccent-colour-light);
     text-decoration: none;
 }
 
@@ -432,21 +510,13 @@ nav{
     color: #ffffff;
 }
 
-#contact img{
-    border: 3px solid red;
-    border-radius: 30px;
-    padding: 10px;
-    margin-right: 10px;
-    fill: red;
-}
-
-.left{
+#contact .left{
     text-align: left;
     float: left;
     width: 50%;
 }
 
-.right{
+#contact .right{
     text-align: left;
     float: right;
     margin-right: 0px;
@@ -596,5 +666,6 @@ footer {
 .back-to-top:hover {
     background-color: var(--faccent-colour);
     transform: translate(-50%, -100%);
+    color: var(--text-colour);
 }
 
