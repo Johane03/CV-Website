@@ -13,7 +13,7 @@
     --fbg-colour: #ACB7DF;
     --fsecond-bg-colour: #68749D;
     --faccent-colour: #670e77;
-    --faccent-colour-light: #a557b2;
+    --faccent-colour-light: #d774e9;
     --sbg-colour: #7998C2;
     --ssecond-bg-colour: #4a6d9c;
     --saccent-colour: #01125d;
@@ -152,8 +152,9 @@ nav{
 }
 
 #mode-toggle{
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
 }
 
 /* Home Section */
@@ -206,8 +207,15 @@ nav{
 #home h2 {
     color: var(--faccent-colour-light);
     font-size: var(--heading-text);
-    padding-bottom: 50px;
     padding-left: 10px;
+}
+
+#home p {
+    color: var(--button-bg-colour);
+    font-size: var(--p-text);
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #home aside{
@@ -220,7 +228,7 @@ nav{
     display: block;
     width: 100%;
     height: 100%;
-    margin: 250px auto;
+    margin: 200px auto;
 }
 
 #home .buttons{
@@ -234,17 +242,20 @@ nav{
 }
 
 #about aside{
-    width: 50%;
+    width: 45%;
     height: 100%;
-    padding: 10px;
     float: left;
 }
 
 #about article{
-    width: 50%;
+    width: 55%;
     height: 100%;
-    padding: 20px 50px 20px 0px;
     float: right;
+    text-align: justify;
+}
+
+#about article p{
+    color: var(--button-bg-colour);
 }
 
 .flip-card {
@@ -344,6 +355,7 @@ nav{
     border-radius: 100px;
     transition: 0.2s;
     background-image: none;
+    background-size: cover;
 }
 
 .box .progress_bar_box .progress_bar .line::before{
@@ -409,11 +421,12 @@ nav{
 
 #contact ul p{
     margin-bottom: 10px;
-    color: black !important;
+    color: var(--button-bg-colour) !important;
 }
 
 #contact ul h3{
     margin-bottom: 5px;
+    color: var(--faccent-colour);
 }
 
 #contact li{
@@ -503,10 +516,10 @@ nav{
     color: #ffffff;
 }
 
-.follow .twitter:hover,
-.follow .twitter:hover .tooltip,
-.follow .twitter:hover .tooltip::before {
-    background-color: #46c1f6;
+.follow .github:hover,
+.follow .github:hover .tooltip,
+.follow .github:hover .tooltip::before {
+    background-color: black;
     color: #ffffff;
 }
 
@@ -586,6 +599,10 @@ nav{
 .submitButton{
     grid-column: 4;
     grid-row: 8;
+}
+
+#contact form label{
+    color: var(--button-bg-colour);
 }
 
 #contact form textarea{

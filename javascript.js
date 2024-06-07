@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let skillSection = document.querySelector('#skills');
     let boxes = document.querySelectorAll('.box');
 
-    // Callback function to execute when the observer detects intersection
     function onIntersection(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -14,14 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Options for the observer (we can set a root, margin, and threshold)
     let options = {
-        root: null,  // Use the viewport as the root
+        root: null,  
         rootMargin: '0px',
-        threshold: 0.5  // Trigger when 50% of the section is visible
+        threshold: 0.5  
     };
 
-    // Create an intersection observer
     let observer = new IntersectionObserver(onIntersection, options);
     observer.observe(skillSection);
 
@@ -54,6 +51,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Disply Skill Text upon hover
+const text = document.getElementById("skill_text").innerHTML;
+const img = document.getElementById("skill_img").innerHTML;
+
+function showText() {
+    document.getElementById("text").style.display = "block";
+    document.getElementById("img").style.display = "none";
+}
+
+function hideText() {
+    document.getElementById("skill_text").style.display = "none";
+    document.getElementById("skill_img").style.display = "block";
+
+}
+
 // Sticky NavList
 window.addEventListener('scroll', function() {
     let navList = document.querySelector('header');
@@ -81,8 +93,8 @@ modeToggle.addEventListener('click', () => {
         root.style.setProperty('--fsecond-bg-colour', 'var(--ssecond-bg-colour)');
         root.setAttribute('data-mode', 'blue');
     } else {
-        root.style.setProperty('--faccent-colour', '#301934');
-        root.style.setProperty('--faccent-colour-light', '#a557b2');
+        root.style.setProperty('--faccent-colour', '#670e77');
+        root.style.setProperty('--faccent-colour-light', '#d774e9');
         root.style.setProperty('--fbg-colour', '#ACB7DF');
         root.style.setProperty('--fsecond-bg-colour', '#68749D');
         root.setAttribute('data-mode', 'purple');
