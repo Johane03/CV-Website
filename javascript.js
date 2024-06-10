@@ -51,21 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Disply Skill Text upon hover
-const text = document.getElementById("skill_text").innerHTML;
-const img = document.getElementById("skill_img").innerHTML;
-
-function showText() {
-    document.getElementById("text").style.display = "block";
-    document.getElementById("img").style.display = "none";
-}
-
-function hideText() {
-    document.getElementById("skill_text").style.display = "none";
-    document.getElementById("skill_img").style.display = "block";
-
-}
-
 // Sticky NavList
 window.addEventListener('scroll', function() {
     let navList = document.querySelector('header');
@@ -109,3 +94,32 @@ function scrollToTop()
         behavior: 'smooth'
     });
 }
+
+// Projects - Gallery Arrows
+function scrollLeft(button) {
+    const gallery = button.parentElement.querySelector('.gallery');
+    gallery.scrollBy({ left: -gallery.clientWidth, behavior: 'smooth' });
+}
+
+function scrollRight(button) {
+    const gallery = button.parentElement.querySelector('.gallery');
+    gallery.scrollBy({ left: gallery.clientWidth, behavior: 'smooth' });
+}
+
+// Skills - Text & Image Rotation Display
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

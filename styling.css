@@ -74,7 +74,7 @@ section{
 
 .myButton:hover{
     background-color: var(--faccent-colour-light);
-    color: var(--text-colour);
+    color: var(--faccent-colour);
 }
 
 /* Header Section */
@@ -184,10 +184,10 @@ nav{
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: var(--faccent-colour-light);
     border-radius: 50%;
     overflow: hidden; 
     box-shadow: var(--box-shadow1);
+    background: linear-gradient(120deg, var(--faccent-colour), var(--faccent-colour-light));
 }
 
 #home img {
@@ -252,18 +252,19 @@ nav{
     height: 100%;
     float: right;
     text-align: justify;
+    padding-right: 10px;
 }
 
 #about article p{
-    color: var(--button-bg-colour);
+    color: black;
 }
 
 .flip-card {
     border: 2px solid transparent;
     background-color: transparent;
     border-radius: 5px;
-    padding: 20px 0px 20px 50px;
-    width: 75%;
+    padding: 25px 100px 25px 50px;
+    width: 100%;
     height: 90%;
 }
 
@@ -327,6 +328,10 @@ nav{
     float: left;
 }
 
+.box h3{
+    display: none;
+}
+
 .box img, svg{
     width: 40px;
     height: 40px;
@@ -386,31 +391,75 @@ nav{
     background-color: var(--fsecond-bg-colour);
 }
 
-.grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+#projects h2{
+    color: var(--text-colour);
+    margin-bottom: 15px;
 }
 
-.grid_item{
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 20px;
+    padding: 20px;
+    row-gap: 70px;
+}
+
+.grid_item {
+    position: relative; /* To position the arrows within each grid item */
     max-height: 200px;
 }
 
-.gallery{
+.gallery {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
     width: 100%;
-    height: 100%;
+    height: 200px;
     border-radius: 5px;
+    border: 1px solid var(--faccent-colour);
     box-shadow: var(--box-shadow2);
-    overflow: hidden;
-    overflow-y: scroll;
+    scroll-snap-type: x mandatory;
 }
 
-.gallery img{
-    width: 100%;
+.gallery img {
     height: 100%;
+    width: 100%;
     border-radius: 5px;
-    margin: 0;
+    margin-right: 5px;
+    scroll-snap-align: center;
+    border: 1px solid var(--button-bg-colour);
+}
+
+.gallery img:last-child {
+    margin-right: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
 }
 
 /* Contact Section */
@@ -526,7 +575,7 @@ nav{
 #contact .left{
     text-align: left;
     float: left;
-    width: 50%;
+    width: 40%;
 }
 
 #contact .right{
@@ -534,7 +583,7 @@ nav{
     float: right;
     margin-right: 0px;
     margin-left: auto;
-    width: 50%;
+    width: 60%;
 }
 
 #contact form {
@@ -542,6 +591,8 @@ nav{
     grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: auto;
     grid-gap: 10px;
+    padding-top: 20px;
+    padding-right: 20px;
 }
 
 #contact form span{
