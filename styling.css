@@ -328,11 +328,16 @@ nav{
     float: left;
 }
 
-.box h3{
+#skills h2{
     display: none;
+    padding-top: 15px;
+    background: linear-gradient(360deg, var(--faccent-colour), var(--faccent-colour-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-.box img, svg{
+.skills_image{
     width: 40px;
     height: 40px;
 }
@@ -399,7 +404,6 @@ nav{
 .grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
     gap: 20px;
     padding: 20px;
     row-gap: 70px;

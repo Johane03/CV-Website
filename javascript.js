@@ -1,4 +1,4 @@
-// Skill bars
+// Skills - Skill Bars
 document.addEventListener('DOMContentLoaded', function() {
     let skillSection = document.querySelector('#skills');
     let boxes = document.querySelectorAll('.box');
@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 load_bars();
+                startRotation();
             } else {
                 reset_bars();
             }
@@ -47,6 +48,31 @@ document.addEventListener('DOMContentLoaded', function() {
             
             line.style.width = '0%';
             increasing_percentage.innerHTML = '0%';
+        });
+    }
+
+    // Text & Image Rotation
+    function rotateImageAndText(box) {
+        let image = box.querySelector('.skills_image');
+        let text = box.querySelector('h2');
+        let isVisible = false;
+
+        setInterval(() => {
+            if (isVisible) {
+                if (image) image.style.display = 'block'; 
+                if (text) text.style.display = 'none'; 
+            } 
+            else {
+                if (text) text.style.display = 'block';
+                if (image) image.style.display = 'none';
+            }
+            isVisible = !isVisible;
+        }, 5000);
+    }
+
+    function startRotation() {
+        boxes.forEach(box => {
+            rotateImageAndText(box);
         });
     }
 });
@@ -106,7 +132,6 @@ function scrollRight(button) {
     gallery.scrollBy({ left: gallery.clientWidth, behavior: 'smooth' });
 }
 
-// Skills - Text & Image Rotation Display
 
 
 
