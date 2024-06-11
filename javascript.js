@@ -132,6 +132,25 @@ function scrollRight(button) {
     gallery.scrollBy({ left: gallery.clientWidth, behavior: 'smooth' });
 }
 
+// Projects - Active grid_item display
+document.addEventListener('DOMContentLoaded', function() {
+    let gridItems = document.querySelectorAll('.grid_item');
+    let currentIndex = 0;
+
+    function highlightNextItem() {
+        gridItems.forEach(item => item.classList.remove('in-view'));
+
+        gridItems[currentIndex].classList.add('in-view');
+
+        currentIndex = (currentIndex + 1) % gridItems.length;
+    }
+
+    highlightNextItem();
+
+    setInterval(highlightNextItem, 3000);
+});
+
+
 
 
 
