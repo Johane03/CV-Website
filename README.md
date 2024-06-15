@@ -1,2 +1,2 @@
-# CV-Website
-Johané Badenhorst's CV Website
+# Portfolio-Website
+Johané Badenhorst's Portfolio Website
