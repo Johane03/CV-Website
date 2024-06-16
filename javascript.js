@@ -105,9 +105,9 @@ modeToggle.addEventListener('click', () => {
         root.setAttribute('data-mode', 'blue');
     } else {
         root.style.setProperty('--faccent-colour', '#670e77');
-        root.style.setProperty('--faccent-colour-light', '#d774e9');
-        root.style.setProperty('--fbg-colour', '#ACB7DF');
-        root.style.setProperty('--fsecond-bg-colour', '#68749D');
+        root.style.setProperty('--faccent-colour-light', '#b354c4');
+        root.style.setProperty('--fbg-colour', '#d2c1f6');
+        root.style.setProperty('--fsecond-bg-colour', '#77689d');
         root.setAttribute('data-mode', 'purple');
     }
 });
@@ -149,6 +149,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(highlightNextItem, 3000);
 });
+
+
 
 
 

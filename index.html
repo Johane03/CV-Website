@@ -43,7 +43,7 @@
                     While I excel in teamwork, I also thrive independently.
                 </p>
                 <div class="buttons">
-                    <a href="files/CV_JohanéBadenhorst.pdf" class="myButton"  download="CV - Johané Badenhorst">Download CV</a>
+                    <a href="files/CV_JohanéBadenhorst.pdf" class="myButton" download="CV - Johané Badenhorst">Download CV</a>
                     <a href="files/AcademicPdf.pdf" class="myButton" download="Academic Record - Johané Badenhorst">Download Academic Record</a>
                 </div>
             </div>
@@ -288,7 +288,7 @@
                 <div class="gallery">
                     <div class="project_hover">
                         <div class="project_buttons">
-                            <a href="https://github.com/Johane03/RS-Projects_Website" class="icon">
+                            <a href="https://github.com/Johane03/RS-Projects_Website" class="project_icon">
                                 <span><i class="fab fa-github"></i></span>
                             </a>
                         </div>
@@ -322,7 +322,7 @@
                 <div class="gallery">
                     <div class="project_hover">
                         <div class="project_buttons">
-                            <a href="https://github.com/Johane03/RS-Projects_Website" class="icon">
+                            <a href="https://github.com/Johane03/RS-Projects_Website" class="project_icon">
                                 <span><i class="fab fa-github"></i></span>
                             </a>
                         </div>
@@ -367,7 +367,7 @@
                 <div class="gallery">
                     <div class="project_hover">
                         <div class="project_buttons">
-                            <a href="https://github.com/Johane03/RS-Projects_Website" class="icon">
+                            <a href="https://github.com/Johane03/RS-Projects_Website" class="project_icon">
                                 <span><i class="fab fa-github"></i></span>
                             </a>
                         </div>
@@ -386,10 +386,32 @@
                             </div>
                         </div>
                     </div>
-                    <img src="images/project1-1.jpg" alt="Project 1">
-                    <img src="images/project1-2.jpg" alt="Project 1">
-                    <img src="images/project1-3.jpg" alt="Project 1">
-                    <img src="images/project1-4.jpg" alt="Project 1">   
+                    <img src="images/projects/p3/p_website-home.png" alt="Portfolio Website Home">
+                    <img src="images/projects/p3/p_website-skills.png" alt="Portfolio Website Skills">
+                    <img src="images/projects/p3/p_website-contact.png" alt="Portfolio Website Contact">
+                </div>
+                <button class="arrow arrow-right" onclick="scrollRight(this)">&#9654;</button>
+            </div>
+
+            <div class="grid_item">
+                <div class="project_heading">
+                    <h2>LP Model Solver</h2>
+                </div>
+                <button class="arrow arrow-left" onclick="scrollLeft(this)">&#9664;</button>
+                <div class="gallery">
+                    <div class="project_hover">
+                        <div class="project_buttons">
+                            <a href="https://github.com/Johane03/RS-Projects_Website" class="project_icon">
+                                <span><i class="fab fa-github"></i></span>
+                            </a>
+                        </div>
+                        <div class="project_tags">
+                            <div>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <img src="images/projects/p4/home.png" alt="LP Model Solver Image 1">
                 </div>
                 <button class="arrow arrow-right" onclick="scrollRight(this)">&#9654;</button>
             </div>
@@ -403,7 +425,8 @@
                 <span>Contact Me</span>
             </h1>
             <ul>
-                <li><h3>Email:</h3><p>577401@student.belgiumcampus.ac.za</p><p>johanebadenhorst11@gmail.com</p></li>
+                <li><h3>Email:</h3><p><a href="mailto:577401@student.belgiumcampus.ac.za?subject=CV Website Enquiry&body=Looking%20forward%20to%20hearing%20from%20you!">577401@student.belgiumcampus.ac.za</a></p>
+                                    <p><a href="mailto:johanebadenhorst11@gmail.com?subject=CV Website Enquiry&body=Looking%20forward%20to%20hearing%20from%20you!">johanebadenhorst11@gmail.com</a></p></li>
                 <li><h3>Phone:</h3><p>+27 82 893 5976</p></li>
                 <li><h3>Address:</h3><p>Steenkoppies Farm <br> Magaliesburg <br> Rustenburg Road <br> 1791</p></li>
             </ul>
@@ -423,7 +446,7 @@
             </div>
         </div>
         <div class="right">
-            <form action="email.php" method="post">
+            <form action="send_email.php" method="post">
                 <div class="name1">
                     <label for="firstName"><h3>Name:<span>*</span></h3></label>
                 </div>
@@ -437,7 +460,7 @@
                     <label for="email"><h3>Email:<span>*</span></h3></label>
                 </div>
                 <div class="email2">
-                    <input type="email" name="email" placeholder="" required>
+                    <input type="email" name="email" required>
                 </div>
                 <div class="message1">
                     <label for=""><h3>Message:<span>*</span></h3></label>
