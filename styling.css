@@ -435,7 +435,7 @@ nav{
 .grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 50px;
     padding-top: 10px;
     row-gap: 65px;
 }
@@ -443,7 +443,7 @@ nav{
 .grid_item {
     position: relative; 
     max-height: 230px;
-    margin: 5px 80px 0px 80px;
+    margin: 5px 100px 0px 100px;
 }
 
 .gallery {
